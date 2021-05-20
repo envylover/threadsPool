@@ -26,12 +26,12 @@ namespace threadPool
 		std::mutex                           _mutexOfFunQ;
 		std::mutex                           _mutexOfthrdQ;
 		size_t                               _maxThreadCount;
-		std::atomic<size_t>                  _threadCount = 0;
+		std::atomic<size_t>                  _threadCount;
 	public:
 		void addTask(Task task);
 		void setMaxThreadsCount(size_t count);
 		threadsManager(size_t maxThreadCount);
-		threadsManager();
+		threadsManager() {}
 
 	private:
 		void finishCallback(std::shared_ptr<Thread> t);

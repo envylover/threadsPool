@@ -66,20 +66,6 @@ threadPool::threadsManager::threadsManager(size_t maxThreadCount)
 	    ++_threadCount;
 	}
 }
-
-//--------------------------------------------------------------------
-
-
-
-
-
-//--------------------------------------------------------------------
-threadPool::threadsManager::threadsManager()
-{
-	_maxThreadCount = std::thread::hardware_concurrency() * 2;
-}
-
-
 //--------------------------------------------------------------------
 
 
